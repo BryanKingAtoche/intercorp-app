@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <form class="reactive-form" [formGroup]="registerForm" (ngSubmit)="registerCustomer()">
+                <h3>Nuevo Cliente</h3>
+                <div>
+                    <mat-form-field appaearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input type="text" formControlName="name" matInput>
+                    </mat-form-field>
+                    <mat-form-field appaearance="fill">
+                        <mat-label>Apellidos</mat-label>
+                        <input type="text" formControlName="lastname" matInput>
+                    </mat-form-field>
+                    <mat-form-field appaearance="fill">
+                        <mat-label>Fecha de Nacimiento</mat-label>
+                        <input matInput [matDatepicker]="birth" formControlName="birth">
+                        <mat-datepicker-toggle matSuffix [for]="birth"></mat-datepicker-toggle>
+                        <mat-datepicker #birth></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="text-right">
+                    <button type="submit" mat-button color="blue" [disabled]="!registerForm.valid">Registrar
+                        Cliente</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

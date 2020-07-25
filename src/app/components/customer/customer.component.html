@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">Lista de Clientes</div>
+    <div class="row">
+        <div class="col-sm-12 col-md-4" *ngFor="let customer of customers">
+            <mat-card class="card-theme">
+                <mat-card-header>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-card-title>{{customer.name}}</mat-card-title>
+                    <mat-card-subtitle>{{customer.lastname}}</mat-card-subtitle>
+                    <mat-card-subtitle>{{customer.age}} años</mat-card-subtitle>
+                    <mat-card-subtitle>{{customer.birth}}</mat-card-subtitle>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button color="primary">Detalle</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
